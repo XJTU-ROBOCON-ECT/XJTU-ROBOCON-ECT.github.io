@@ -974,7 +974,12 @@ a {
 
   .hero {
     min-height: 94svh;
-    padding-top: 8rem;
+    align-content: start;
+    padding-top: 9.5rem;
+  }
+
+  .signal-field {
+    inset: 6rem var(--page-gutter) auto;
   }
 
   .signal-field span:nth-child(2) {
@@ -1001,6 +1006,18 @@ a {
 
   .hero-status span:nth-child(2) {
     display: none;
+  }
+
+  .motion-ready [data-reveal] {
+    opacity: 1;
+    transform: translateY(36px);
+    transition-property: transform;
+  }
+
+  .motion-ready [data-reveal].is-visible,
+  .motion-ready .season-heading.is-visible.is-obscured {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .section-heading h2,
