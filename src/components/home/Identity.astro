@@ -1,0 +1,32 @@
+---
+const archiveSlots = [
+  ['TEAM HISTORY', '团队历史', '重要年份与团队发展资料待整理'],
+  ['PROJECT ARCHIVE', '历届项目', '退役项目经公开审查后逐步归档'],
+  ['HONORS', '荣誉记录', '以正式材料为依据补充，不虚构成绩'],
+];
+---
+
+<section class="section identity scene-neutral" id="identity" data-section="identity">
+  <div class="section-shell">
+    <header class="section-heading split-heading" data-reveal>
+      <div>
+        <p class="eyebrow">07 / HISTORY & IDENTITY</p>
+        <h2>一支长期建设的<br />机器人团队</h2>
+      </div>
+      <p>
+        网站不会用某一届比赛定义团队的全部历史。这里将逐步承载经过核验的年份、项目与荣誉记录。
+      </p>
+    </header>
+    <div class="archive-grid">
+      {archiveSlots.map(([code, title, note], index) => (
+        <article data-reveal>
+          <span>{String(index + 1).padStart(2, '0')} / {code}</span>
+          <div class="archive-mark" aria-hidden="true"></div>
+          <h3>{title}</h3>
+          <p>{note}</p>
+          <small>VERIFICATION PENDING</small>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

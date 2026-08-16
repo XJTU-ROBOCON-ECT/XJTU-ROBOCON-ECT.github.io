@@ -1,0 +1,38 @@
+---
+import { siteConfig, type RecruitmentConfig } from '../../config/site';
+
+const recruitment: RecruitmentConfig = siteConfig.recruitment;
+const { status, time, applicationUrl, guideUrl, qrCode } = recruitment;
+---
+
+<section class="section join scene-accent" id="join" data-section="join">
+  <div class="section-shell join-shell">
+    <div class="join-title" data-reveal>
+      <p class="eyebrow">10 / JOIN US</p>
+      <h2>Build something.<br />Change something.</h2>
+      <p>招新正文、时间与报名方式将在确认后统一更新。</p>
+    </div>
+    <div class="join-grid" data-reveal>
+      <article>
+        <span>STATUS</span>
+        <strong>{status || '信息待更新'}</strong>
+        <small>RECRUITMENT STATUS</small>
+      </article>
+      <article>
+        <span>TIME</span>
+        <strong>{time || '时间待更新'}</strong>
+        <small>SCHEDULE SLOT</small>
+      </article>
+      <article class="qr-slot">
+        <span>QR</span>
+        {qrCode ? <img src={qrCode} alt="招新二维码" /> : <div aria-label="二维码待更新">QR<br />PENDING</div>}
+        <small>CONTACT SLOT</small>
+      </article>
+      <article class="join-actions-card">
+        <span>ENTRY</span>
+        {applicationUrl ? <a href={applicationUrl}>报名入口 ↗</a> : <span class="disabled-action">报名入口待更新</span>}
+        {guideUrl ? <a href={guideUrl}>招新指南 ↗</a> : <span class="disabled-action">招新指南待更新</span>}
+      </article>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+---
+interface Props {
+  code: string;
+  label: string;
+  note?: string;
+  dark?: boolean;
+}
+
+const { code, label, note = '真实素材待补充', dark = false } = Astro.props;
+---
+
+<div class:list={['media-placeholder', { 'media-placeholder-dark': dark }]} aria-label={`${label}占位区域`}>
+  <span>{code}</span>
+  <div class="placeholder-axis" aria-hidden="true"><i></i><i></i></div>
+  <strong>{label}</strong>
+  <small>{note}</small>
+</div>

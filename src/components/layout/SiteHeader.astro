@@ -1,0 +1,33 @@
+---
+import { navigation } from '../../config/navigation';
+---
+
+<header class="site-header" data-site-header>
+  <a class="brand" href="#top" aria-label="返回首页顶部">
+    <strong>XJTUROBOCON</strong>
+    <span>ELECTRONIC CONTROL TEAM</span>
+  </a>
+
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-expanded="false"
+    aria-controls="site-navigation"
+    data-menu-toggle
+  >
+    <span>MENU</span>
+    <i aria-hidden="true"></i>
+  </button>
+
+  <nav id="site-navigation" aria-label="主要导航" data-site-navigation>
+    <p class="nav-kicker">NAVIGATION / PUBLIC SITE</p>
+    <div class="nav-links">
+      {navigation.map((item, index) => (
+        <a href={item.href} data-section-link={item.section}>
+          <span>{String(index + 1).padStart(2, '0')}</span>{item.label}
+        </a>
+      ))}
+    </div>
+    <p class="nav-note">Build something. Change something.</p>
+  </nav>
+</header>

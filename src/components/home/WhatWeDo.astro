@@ -1,0 +1,39 @@
+---
+const stages = [
+  ['01', 'SENSING', '获得机器人与环境的信息'],
+  ['02', 'EMBEDDED', '在可靠的实时系统中处理输入'],
+  ['03', 'COMMUNICATION', '让控制器、传感器与执行器协同'],
+  ['04', 'CONTROL', '把目标转化为稳定、可验证的动作'],
+  ['05', 'ACTUATION', '驱动机构完成实际任务'],
+  ['06', 'FEEDBACK', '测量结果并继续修正系统'],
+];
+---
+
+<section class="section what-we-do scene-light" id="what-we-do" data-section="what-we-do">
+  <div class="section-shell">
+    <header class="section-heading split-heading" data-reveal>
+      <div>
+        <p class="eyebrow">02 / WHAT WE DO</p>
+        <h2>让机器人<br />感知、判断与行动</h2>
+      </div>
+      <p>
+        机械结构提供能力，电控系统把这些能力组织成可重复、可测量、可维护的机器人行为。
+      </p>
+    </header>
+
+    <ol class="system-flow" aria-label="电控系统闭环">
+      {stages.map(([code, title, description]) => (
+        <li data-reveal>
+          <span>{code}</span>
+          <h3>{title}</h3>
+          <p>{description}</p>
+          <i aria-hidden="true">→</i>
+        </li>
+      ))}
+    </ol>
+
+    <div class="control-loop" data-reveal>
+      <p>INPUT</p><span aria-hidden="true">→</span><p>COMPUTATION</p><span aria-hidden="true">→</span><p>DECISION</p><span aria-hidden="true">→</span><p>CONTROL</p><span aria-hidden="true">↺</span>
+    </div>
+  </div>
+</section>

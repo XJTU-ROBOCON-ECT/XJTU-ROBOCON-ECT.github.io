@@ -1,0 +1,25 @@
+---
+const areas = ['EMBEDDED SYSTEMS', 'COMMUNICATION', 'CONTROL', 'AUTONOMY', 'SYSTEM INTEGRATION'];
+---
+
+<section class="section team scene-light" id="team" data-section="team">
+  <div class="section-shell team-layout">
+    <div class="team-title" data-reveal>
+      <p class="eyebrow">08 / THE TEAM</p>
+      <h2>Electronic<br />Control Team</h2>
+      <p class="team-name-zh">西安交通大学 ROBOCON 机器人战队电控组</p>
+    </div>
+    <div class="team-copy" data-reveal>
+      <p class="large-copy">
+        我们学习如何把分散的硬件、软件和控制方法组织成能够在真实场地可靠工作的系统。
+      </p>
+      <p>
+        新成员从开发工具、C 语言和单片机基础出发，逐步接触通信、电机、传感器、闭环控制、任务组织与机器人软件体系。
+      </p>
+      <div class="team-tags">
+        {areas.map((area) => <span>{area}</span>)}
+      </div>
+      <a class="text-link" href="/docs/training/">查看公开培训路线 <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>

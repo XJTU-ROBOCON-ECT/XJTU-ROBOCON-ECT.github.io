@@ -1,0 +1,30 @@
+---
+import { siteConfig } from '../../config/site';
+---
+
+<section class="hero scene-light" id="top" data-section="top">
+  <div class="signal-field" aria-hidden="true">
+    <span>SIGNAL / 000</span><span>FEEDBACK / READY</span><span>CONTROL / ACTIVE</span>
+  </div>
+  <div class="hero-copy">
+    <p class="eyebrow" data-reveal>00 / ELECTRONIC CONTROL TEAM</p>
+    <h1 aria-label={siteConfig.slogan}>
+      <span data-reveal>Build something.</span>
+      <span data-reveal>Change something.</span>
+    </h1>
+    <div class="hero-lower" data-reveal>
+      <p>
+        让机械结构真正成为机器人。我们围绕感知、嵌入式系统、通信、控制与系统集成开展学习和研发。
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="#what-we-do">了解电控组 <span aria-hidden="true">↓</span></a>
+        <a class="button" href={siteConfig.links.docs}>进入公开文档 <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-status" aria-label="站点状态">
+    <span>PUBLIC SITE / V1</span>
+    <span>ASTRO / STARLIGHT</span>
+    <span>ASSETS / PENDING</span>
+  </div>
+</section>

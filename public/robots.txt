@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://XJTU-ROBOCON-ECT.github.io/sitemap-index.xml

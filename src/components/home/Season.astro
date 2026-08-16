@@ -1,0 +1,30 @@
+---
+import { siteConfig } from '../../config/site';
+import MediaPlaceholder from '../ui/MediaPlaceholder.astro';
+---
+
+<section class="section season scene-dark" id="season" data-section="season">
+  <div class="section-shell season-shell">
+    <header class="section-heading season-heading" data-reveal>
+      <p class="eyebrow">01 / CURRENT SEASON</p>
+      <h2>{siteConfig.season.name}</h2>
+      <p class="display-subtitle">{siteConfig.season.theme}</p>
+    </header>
+    <div class="season-content">
+      <div class="season-copy" data-reveal>
+        <p class="large-copy">每一个赛季，都是一次从任务理解到场地验证的完整工程过程。</p>
+        <p>
+          电控组正在参与 2027 赛季准备。公开网站仅介绍赛事背景和团队方向。
+        </p>
+        <dl class="data-list">
+          <div><dt>STATUS</dt><dd>PREPARING</dd></div>
+          <div><dt>DISCLOSURE</dt><dd>CAPABILITY ONLY</dd></div>
+          <div><dt>DETAILS</dt><dd>INTERNAL</dd></div>
+        </dl>
+      </div>
+      <div data-reveal>
+        <MediaPlaceholder code="SEASON_VISUAL / 01" label="ROBOCON 2027 VISUAL" note="官方赛季素材待审核后替换" dark />
+      </div>
+    </div>
+  </div>
+</section>
