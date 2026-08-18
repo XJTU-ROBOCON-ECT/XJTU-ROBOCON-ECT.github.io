@@ -19,5 +19,6 @@ export const siteConfig = {
   links: {
     github: 'https://github.com/XJTU-ROBOCON-ECT',
     docs: '/docs/',
+    quadruped: 'https://n-w-wolf.github.io/',
   },
 } as const;

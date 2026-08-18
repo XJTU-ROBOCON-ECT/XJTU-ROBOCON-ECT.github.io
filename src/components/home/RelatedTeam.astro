@@ -1,0 +1,26 @@
+---
+import { siteConfig } from '../../config/site';
+---
+
+<section class="related-team-section scene-light" id="related-team" aria-labelledby="related-team-title">
+  <div class="related-team-shell">
+    <p class="related-team-kicker" id="related-team-title">EXPLORE XJTUROBOCON</p>
+    <a
+      class="related-team"
+      href={siteConfig.links.quadruped}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="访问 N.W.wolf 四足机器人组网站（在新窗口打开）"
+      data-reveal
+    >
+      <span class="related-team__logo" aria-hidden="true">
+        <img src="/nwwolf.svg" alt="" width="1218" height="1222" loading="lazy" />
+      </span>
+      <span class="related-team__identity">
+        <strong>N.W.wolf</strong>
+        <span>QUADRUPED ROBOTICS</span>
+      </span>
+      <span class="related-team__arrow" aria-hidden="true">↗</span>
+    </a>
+  </div>
+</section>
